@@ -1,1 +1,33 @@
-<p>favorite-list works!</p>
+
+<div class="container">
+  @for(pokemon of PokemonFav; track pokemon.name) {
+    <div class="card" style="width: 18rem;">
+      @if(pokemon.img){
+        <img [src]="pokemon.img" class="card-img-top" alt="...">
+      }
+      @else {
+        <img src="https://placehold.co/600x400?text=Preview+no+disponible" alt="">
+      }
+      <div class="card-body">
+        @if (editable) {
+          <div class="form-floating mb-3" [formGroup]="form">
+            <input type="text" class="form-control" formControlName = "name" id="floatingInput" placeholder="Edit Alias">
+            <label for="floatingInput">Alias</label>
+          </div>
+        } @else {
+            <h5 class="card-title">{{pokemon.name}}</h5>
+        }
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary" (click)="editable = !editable">editar</button>
+        @if (editable == true){<button type="button" class="btn btn-danger" (click)="edit(pokemon.id)">Guardar</button>}
+        <button type="button" class="btn btn-danger" (click)="deletFav(pokemon.id)" >Eiminar</button>
+      </div>
+    </div>
+  }
+  @empty {
+    <h1>No hay ningun elemento Agregado a favorito</h1>
+  }
+</div>
+
