@@ -9,13 +9,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'edit-pokemons',
-    loadComponent: () =>
-      import('./components/edit-favorite/edit-favorite.component').then(
-        (c) => c.EditFavoriteComponent
-      ),
-  },
-  {
     path: 'favorite-list',
     loadComponent: () =>
       import('./components/favorite-list/favorite-list.component').then(
