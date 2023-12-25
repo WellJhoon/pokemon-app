@@ -16,6 +16,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'pokemon/:name',
+    loadComponent: () =>
+      import('./components/pokemon-details/pokemon-details.component').then(
+        (c) => c.PokemonDetailsComponent
+      ),
+  },
+  {
     path: '**',
     redirectTo: '/list-pokemon',
     pathMatch: 'full',

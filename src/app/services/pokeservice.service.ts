@@ -25,4 +25,12 @@ export class PokeserviceService {
     const url = '';
     return this.http.delete<string>(url);
   }
+
+  getDetails(name: string) {
+    const url = this.apiUrl + `/pokemon/${name}`;
+    return this.http.get<any>(url);
+  }
+  getPokemonNextPage(url: string) {
+    return this.http.get<any>(url);
+  }
 }

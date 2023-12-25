@@ -40,4 +40,9 @@ export class FavoriteListComponent implements OnInit {
     this.editable = !this.editable;
     this.getPokemons();
   }
+  getPokemonImage(url: string): string {
+    const pokemonNumber = url.split('/').filter(Boolean).pop();
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonNumber}.png`;
+    return imageUrl;
+  }
 }

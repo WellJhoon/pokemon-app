@@ -3,4 +3,7 @@ export interface Poke {
   url: string;
   img: string;
   id?: number;
+  sprites: string;
+  front_default: string;
+  pic: string;
 }
