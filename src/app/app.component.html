@@ -1,10 +1,15 @@
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <h1>PokeApi</h1>
-    @for (item of links; track $index) {
-      <a [routerLink]="item.path">{{item.name}}</a>
-    }
+    <a class="navbar-brand" href="#">PokeApi</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li *ngFor="let item of links; let i = index" class="nav-item">
+          <a class="nav-link" [routerLink]="item.path">{{ item.name }}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
 
 <router-outlet></router-outlet>
