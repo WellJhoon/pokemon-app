@@ -1,42 +1,32 @@
+@@ -1,30 +1 @@
+# Demo	
+[https://jpokeapp.netlify.app/list-pokemon](https://jpokeapp.netlify.app)	
 
 
-# ApiUsers
+# PokemonApp	
 
-APi Users Manager For Projects
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.	
 
+## Development server	
 
-## Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.	
 
-Install my-project with npm
+## Code scaffolding	
 
-```bash 
-  cd Server
-  npm install 
- 
-```
-    
-## Environment Variables
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.	
 
-To run this project, you will need to add the following environment variables to your .env file
+## Build	
 
-`API_KEY`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.	
 
-`ANOTHER_API_KEY`
+## Running unit tests	
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).	
 
-## Tech Stack
+## Running end-to-end tests	
 
-**Services:**  Clerk
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.	
 
-**Server:** Node, Express, sequelize, PosgressSQL
+## Further help	
 
-
-## Documentation
-
-[Clerk](https://clerk.com/docs)
-
-
-## Authors
-
-- [@WellJhoon](https://github.com/WellJhoon)
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
